@@ -1,0 +1,40 @@
+.footer-links-separator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-links-separator a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+    padding: 0 15px;
+}
+
+.footer-links-separator a:hover {
+    color: #ffffff;
+}
+
+.footer-links-separator a:not(:last-child):after {
+    content: '|';
+    color: rgba(255, 255, 255, 0.3);
+    margin-left: 15px;
+}
+
+/* Responsive untuk mobile */
+@media (max-width: 768px) {
+    .footer-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .footer-links-separator {
+        flex-direction: column;
+    }
+    
+    .footer-links-separator a:not(:last-child):after {
+        display: none;
+    }
+}
